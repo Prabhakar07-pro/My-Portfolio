@@ -1,0 +1,334 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prabhakar Ramaphalam — Portfolio</title>
+
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#7c3aed;
+      --glass: rgba(255,255,255,0.04);
+      --radius:12px;
+      --max-width:1100px;
+      --ff:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family:var(--ff);
+      background:linear-gradient(180deg,#071021,var(--bg));
+      color:#e6eef6;
+    }
+
+    a{color:inherit;text-decoration:none}
+    .muted{color:var(--muted)}
+
+    .container{
+      max-width:var(--max-width);
+      margin:auto;
+      padding:48px 20px;
+    }
+
+    
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:36px;
+    }
+
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+
+    .logo{
+      width:48px;
+      height:48px;
+      border-radius:10px;
+      background:linear-gradient(135deg,var(--accent),#06b6d4);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+    }
+
+    nav a{
+      margin-left:12px;
+      padding:8px 12px;
+      border-radius:10px;
+      color:var(--muted);
+    }
+
+    nav a:hover{
+      background:var(--glass);
+      color:#fff;
+    }
+
+    .cta{
+      background:linear-gradient(90deg,var(--accent),#06b6d4);
+      padding:10px 14px;
+      border-radius:10px;
+      font-weight:600;
+      color:#fff;
+    }
+
+    
+    .hero{
+      display:grid;
+      grid-template-columns:1fr 420px;
+      gap:32px;
+      margin-bottom:48px;
+      align-items:center; 
+    }
+
+    .card{
+      background:linear-gradient(
+        180deg,
+        rgba(255,255,255,0.02),
+        rgba(255,255,255,0.01)
+      );
+      border-radius:var(--radius);
+      padding:22px;
+    }
+
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:12px;
+    }
+
+    .skill{
+      background:var(--glass);
+      padding:8px 10px;
+      border-radius:10px;
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    
+    .hero-img{
+      width:100%;
+      height:270px;        
+      object-fit:cover;
+      border-radius:16px;
+    }
+
+    section{margin-bottom:48px}
+
+    .projects-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+      margin-top:16px;
+    }
+
+    .project{
+      background:linear-gradient(
+        180deg,
+        rgba(255,255,255,0.02),
+        rgba(255,255,255,0.01)
+      );
+      padding:16px;
+      border-radius:12px;
+    }
+
+    .tag{
+      font-size:13px;
+      padding:6px 8px;
+      border-radius:8px;
+      background:rgba(255,255,255,0.02);
+      color:var(--muted);
+    }
+
+    .about{
+      display:flex;
+      gap:24px;
+      align-items:center;
+    }
+
+    .avatar{
+      width:180px;
+      height:180px;
+      border-radius:18px;
+      background:#071021;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:42px;
+      font-weight:700;
+      color:var(--muted);
+    }
+
+    
+
+    form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:10px;color:#e6eef6}
+    textarea{grid-column:1/-1;min-height:120px;resize:vertical}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#06b6d4);padding:12px 16px;border-radius:12px;border:none;color:white;font: weight 600px;}
+
+    .resume-btn{display:inline-block;padding:10px 14px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+  
+
+    footer{
+      text-align:center;
+      color:var(--muted);
+    }
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .projects-grid{grid-template-columns:1fr}
+      .hero-img{height:200px}
+    }
+
+    @media(max-width:600px){
+      nav{display:none}
+    }
+  </style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+  <div class="brand">
+    <div class="logo">PR</div>
+    <div>
+      <strong>Prabhakar Ramaphalam</strong><br/>
+      <span class="muted" style="font-size:13px">
+        B.Tech Fresher • Software Developer • Data Scientist
+      </span>
+    </div>
+  </div>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+     <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+    <a class="cta" href="#contact">Hire Me</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="card">
+    <h1>Hi, I'm <span style="color:var(--accent)">Prabhakar Ramaphalam</span></h1>
+    <p class="muted">
+       Aspiring software developer with hands-on experience in web development and Python, focused on building clean, functional, and scalable applications.
+    </p>
+
+    <div class="skills">
+      <div class="skill">Python</div>
+      <div class="skill">SQL</div>
+      <div class="skill">Gen AI</div>
+      <div class="skill">HTML</div>
+      <div class="skill">CSS</div>
+      <div class="skill">Django</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">REST APIs</div>
+    </div>
+     <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+            <a class="resume-btn" href="#resume">View Resume</a>
+            <a class="resume-btn" href="mailto:prabhakarramaphalam07@gmail.com">prabhakarramaphalam07@gmail.com</a>
+            
+          </div>
+  </div>
+
+  <img src="port_img.png" alt="Prabhakar" class="hero-img">
+</section>
+
+<section class="currently">
+  <div class="card" style="text-align:center">
+    <h2>Currently</h2>
+    <p class="muted">B.Tech Graduate | Developer & Data Science Enthusiast</p>
+    <p class="muted">Location: Hyderabad, India</p>
+     <div style="margin-top:18px">
+              <a class="resume-btn" href="#projects">View My Work</a>
+            </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="card">
+    <h2>Projects</h2>
+
+    <div class="projects-grid">
+      <div class="project">
+        <h3>TB & Lung Cancer Detection using ML</h3>
+        <p class="muted">Developed an ML-based system for TB and Lung Cancer Detection from X-ray/CT scan images using SVM,CNN and KNN models with 85% accuracy.</p>
+        <span class="tag">Python</span>
+        <span class="tag">Django</span>
+        <span class="tag">TensorFlow</span>
+        <span class="tag">Scikit-learn</span>
+      </div>
+
+      <div class="project">
+        <h3>Personal Portfolio Website</h3>
+        <p class="muted">Designed & developed a responsive personal portfolio website to showcase projects, skills, and professional profile. Implemented smooth navigation, and optimized layout using modern web technologies.</p>
+            <div class="proj-tags"></p>
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">GitHub</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="card">
+    <h2>About Me</h2>
+    <div class="about">
+      <div class="avatar">PR</div>
+      <div>
+      <p>
+         I am a B.Tech graduate with hands-on experience in web application development,working knowledge of SQL databases, RESTful APIs, and version control using Git.
+      </p> 
+      
+<ul>
+  <li><strong>Education:</strong> B.Tech in ECE (2025) — NRI Institute of Technology.</li>
+  <li><strong>Technical Skills:</strong> Python, SQL, HTML, CSS, JavaScript, Django, REST APIs, Gen AI.</li>
+  <li><strong>Certifications:</strong> Jr Software Developer, ML and DS with Python,Gen AI Engineer.</li>
+</ul>
+ <div style="margin-top:12px">
+              <a class="resume-btn" id="resume" href="https://drive.google.com/file/d/1Don2YEO1Lyc0vpKf1dFJQ_bsovIZ0fek/view?usp=drivesdk " target="_blank">Download Resume (PDF)</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <section id="contact" style="margin-top:40px">
+        
+         
+        <div class="card" style="margin-top:12px">
+           <h2>Contact</h2>
+          <form onsubmit="handleContact(event)">
+            
+
+            <input required name="name" placeholder="Your Name"/>
+            <input required name="email" placeholder="Your Email"/>
+            <textarea required name="message" placeholder="Message"></textarea>
+            <div style="display:flex;gap:12px;justify-content:flex-end">
+              <button class="btn-primary" type="submit">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <footer>
+        <div>© Prabhakar Ramaphalam<span class="muted">  <span id="year"></span></span></div>
+        <div class="muted">LinkedIn: <a href="https://www.linkedin.com/in/prabhakar-dev">Prabhakar Ramaphalam</a></div>
+      </footer>
+    </main>
+  </div>
+ 
+</body>
+</html>
