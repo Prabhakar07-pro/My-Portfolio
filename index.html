@@ -193,7 +193,24 @@
     @media(max-width:600px){
       nav{display:none}
     }
-  </style>
+
+
+  
+.top{
+    position: fixed;
+    bottom: 18px;
+    right: 25px;
+    background: navy;
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+</style>
 </head>
 
 <body>
@@ -232,7 +249,6 @@
       <div class="skill">Gen AI</div>
       <div class="skill">HTML</div>
       <div class="skill">CSS</div>
-      <div class="skill">Django</div>
       <div class="skill">JavaScript</div>
       <div class="skill">REST APIs</div>
     </div>
@@ -272,12 +288,15 @@
       </div>
 
       <div class="project">
-        <h3>Personal Portfolio Website</h3>
-        <p class="muted">Designed & developed a responsive personal portfolio website to showcase projects, skills, and professional profile. Implemented smooth navigation, and optimized layout using modern web technologies.</p>
+        <h3>Resume Analyzer Web App</h3>
+        <p class="muted"> Developed a FastAPI-based web application that analyzes resumes, extracts skills, and recommends job roles using a configurable match-score threshold, with a clean UI and live deployment.</p>
             <div class="proj-tags"></p>
+        <span class="tag">Python</span>
+        <span class="tag">FastAPI</span>
         <span class="tag">HTML</span>
         <span class="tag">CSS</span>
-        <span class="tag">GitHub</span>
+        <span class="tag">JavaScript</span>
+    
       </div>
     </div>
   </div>
@@ -323,6 +342,7 @@
         </div>
       </section>
 
+ 
       <footer>
         <div>© Prabhakar Ramaphalam<span class="muted">  <span id="year"></span></span></div>
         <div class="muted">LinkedIn: <a href="https://www.linkedin.com/in/prabhakar-dev">Prabhakar Ramaphalam</a></div>
@@ -330,5 +350,33 @@
     </main>
   </div>
  
+
+<button class="top" onclick="goToTop()">
+    Back to Top &#11014;
+</button>
+ 
+<script>
+function goToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+const backToTopBtn = document.querySelector(".top");
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {   // Show button after scrolling down 300px
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+});
+</script>
+
+
+
 </body>
 </html>
+
+
