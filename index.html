@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -318,7 +318,7 @@
   <li><strong>Certifications:</strong> Jr Software Developer, ML and DS with Python,Gen AI Engineer.</li>
 </ul>
  <div style="margin-top:12px">
-              <a class="resume-btn" id="resume" href="https://drive.google.com/file/d/1Don2YEO1Lyc0vpKf1dFJQ_bsovIZ0fek/view?usp=drivesdk " target="_blank">Download Resume (PDF)</a>
+              <a class="resume-btn" id="resume" href=" https://drive.google.com/file/d/1keoK4rTxYMiKPIUtjXQQ5JuQoSXyyEku/view " target="_blank">Download Resume (PDF)</a>
             </div>
           </div>
         </div>
@@ -373,10 +373,43 @@ window.addEventListener("scroll", () => {
     }
 });
 </script>
+ 
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  // 1️⃣ Initialize EmailJS (REPLACE WITH YOUR REAL PUBLIC KEY)
+  emailjs.init("HffRuuZNUvQLSiiJy");
+
+  // 2️⃣ Handle contact form submission
+  function handleContact(event) {
+    event.preventDefault();
+
+    emailjs.send(
+      "service_oaco26t",   // e.g. service_xxxxxx
+      "template_fg06nxb",  // e.g. template_xxxxxx
+      {
+        from_name: event.target.name.value,
+        from_email: event.target.email.value,
+        message: event.target.message.value
+      }
+    )
+    .then(() => {
+      alert("Message sent successfully!");
+      event.target.reset();
+    })
+    .catch((error) => {
+      console.error("EmailJS error:", error);
+      alert("Failed to send message. Try again.");
+    });
+  }
+</script>
 
 
 
 </body>
 </html>
+
 
 
